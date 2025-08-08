@@ -4,18 +4,6 @@ This repository contains all supporting scripts, notebooks, and structured input
 
 ---
 
-## 📁 Repository Structure
-
-```
-.
-├── examples/             # Example input sets and corresponding output files
-├── inputs_template/      # Template .csv files for creating new examples
-├── speci/                # Core scripts and functions for preprocessing
-├── environment.yml       # Conda environment definition for reproducibility
-└── README.md             # You're here!
-```
-
----
 
 ## ⚙️ Conda Environment Setup
 
