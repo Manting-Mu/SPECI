@@ -1,0 +1,5 @@
+components,charge,connectivity allowed,donor atom,type
+TMP,-1,"0, 1, 2",N,ligand
+Li,1,"0, 1, 2, 3, 4",Li,metal
+DonorTHFO1,0,"0, 1",O,ligand
+DonorTHFO1,0,"0, 1",O,ligand

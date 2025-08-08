@@ -1,0 +1,4 @@
+components,charge,connectivity allowed,donor atom,type
+Na,1,"0, 1, 2, 3, 4",Na,metal
+OEt2,0,"0, 1, 2",O,ligand
+OEt2,0,"0, 1, 2",O,ligand

@@ -1,0 +1,6 @@
+components,charge,connectivity allowed,donor atom,type
+Mg,2,"0, 1, 2, 3, 4",Mg,metal
+OEt2,0,"0, 1",O,ligand
+R,-1,"0, 1",C,ligand
+DonorLN2N1,-1,"0, 1",N,ligand
+DonorLN2N2,-1,"0, 1, 2",N,ligand

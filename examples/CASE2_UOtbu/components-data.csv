@@ -1,0 +1,4 @@
+components,charge,connectivity allowed,donor atom,type
+OtBu,0,"0, 1, 2, 3",O,ligand
+U,0,"0, 4",U,metal
+OtBu,0,"0, 1, 2, 3",O,ligand
