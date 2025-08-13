@@ -1,14 +1,15 @@
 sage: "If you use this software, please cite it as below."
 authors:
-  - Manting Mu
-    orcid: https://orcid.org/0000-0003-1842-3020
-  - Timo Sommer
-    orcid: https://orcid.org/0000-0002-1706-3302
-  - Max Garcia-Melchor
+  - family-names: "Mu"
+    given-names: "Manting"
+    orcid: "https://orcid.org/0000-0003-1842-3020"
+  - family-names: "Sommer"
+    given-names: "Timo"
+    orcid: "https://orcid.org/0000-0002-1706-3302"
+  - family-names: "García-Melchor"
+    given-names: "Max"
     orcid: https://orcid.org/0000-0003-1348-4692
 title: "SPECI"
 version: 1.0.0
-identifiers:
-  - type: doi
-    value: 10.5281/zenodo.16823094
+doi: 10.5281/zenodo.16823094
 date-released: 2025-08-13
