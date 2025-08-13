@@ -1,4 +1,4 @@
-# SPECI Automated Speciation Study for Multinuclear Metal Complexes
+# SPECI Automated Speciation Study for Multinuclear Metal Species
 
 This repository contains all supporting scripts, notebooks, and structured input files used in the development and application of the **SPECI** and **SPECI-AUTOCOPASI** workflow, designed for automated chemical speciation and microkinetic modeling. It supports a Jupyter notebook-based interface and is tailored for reproducible research and extension by all other chemists.
 
