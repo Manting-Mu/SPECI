@@ -1,0 +1,6 @@
+sphinx
+matplotlib
+pandas
+numpy
+git+https://github.com/copasi/basico.git
+sphinx_rtd_theme

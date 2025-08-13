@@ -1,0 +1,213 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Actinide Complexes: Example Case Study &mdash; SPECI 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bimetallic IIP: Example Case Study" href="bimetallic_IIP.html" />
+    <link rel="prev" title="Solvent Coordination: Example Case Study (LiTMP/THF)" href="solvent_coordination.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SPECI
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_input_files.html">General Input Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_input_files.html#input-settings">Input Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_input_files.html#additional-settings-for-advanced-users">Additional Settings for Advanced Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_ouput_files.html">General Output Files</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="solvent_coordination.html">Solvent Coordination: Example Case Study (LiTMP/THF)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Actinide Complexes: Example Case Study</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#directory-overview">Directory Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#input-preparation">Input Preparation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-workflow">Running the Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#analyzing-output">Analyzing Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tips-best-practices">Tips &amp; Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#references-further-reading">References &amp; Further Reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bimetallic_IIP.html">Bimetallic IIP: Example Case Study</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Automated Microkinetic Modelling</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation-MKM.html">AUTOCOPASI: Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_usage-MKM.html">Example Usage: SPECI-AUTOCOPASI Integration</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SPECI</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Actinide Complexes: Example Case Study</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/actinide_complexes.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="actinide-complexes-example-case-study">
+<h1>Actinide Complexes: Example Case Study<a class="headerlink" href="#actinide-complexes-example-case-study" title="Link to this heading"></a></h1>
+<p>This case study demonstrates how to use SPECI for speciation analysis of actinide complexes, specifically a uranium–tert-butoxide system. The example follows the workflow in the <cite>CASE2_UOtbu</cite> folder and illustrates the use of input files, structure generation, and output analysis.</p>
+<section id="directory-overview">
+<h2>Directory Overview<a class="headerlink" href="#directory-overview" title="Link to this heading"></a></h2>
+<p>The example folder (<cite>CASE2_UOtbu</cite>) contains:</p>
+<ul class="simple">
+<li><p><cite>components-data.csv</cite> — Main input describing the fragments in the system.</p></li>
+<li><p><cite>ct/</cite> — ChemDraw structure files for each component (in <cite>.ct</cite> format).</p></li>
+<li><p><cite>xyz/</cite> — Generated 3D structures for all enumerated species (in <cite>.xyz</cite> format).</p></li>
+<li><p><cite>com/</cite> — Gaussian input files for quantum chemical optimization of selected structures.</p></li>
+<li><p><cite>atom_energy_index_combined_output.csv</cite> — Parsed energy output file summarizing computed energies for each structure.</p></li>
+<li><p><cite>logfile.rtf</cite> — Execution log and summary.</p></li>
+<li><p>Additional <cite>.ct</cite> files for each fragment in the root folder.</p></li>
+</ul>
+</section>
+<section id="input-preparation">
+<h2>Input Preparation<a class="headerlink" href="#input-preparation" title="Link to this heading"></a></h2>
+<p><strong>1. Edit the `components-data.csv` file:</strong></p>
+<p>This CSV specifies the building blocks (fragments), their charge, bonding atoms, and roles. For the uranium–tert-butoxide case, the file looks like:</p>
+<div class="highlight-csv notranslate"><div class="highlight"><pre><span></span>components,charge,connectivity allowed,donor atom,type
+OtBu,0,&quot;0, 1, 2, 3&quot;,O,ligand
+U,0,&quot;0, 4&quot;,U,metal
+OtBu,0,&quot;0, 1, 2, 3&quot;,O,ligand
+</pre></div>
+</div>
+<p><strong>2. Place ChemDraw `.ct` files</strong>
+Ensure all fragments listed in the CSV have a matching <cite>.ct</cite> file, stored in <cite>ct/</cite> and/or the root folder (e.g., <cite>U.ct</cite>, <cite>OtBu.ct</cite>).</p>
+</section>
+<section id="running-the-workflow">
+<h2>Running the Workflow<a class="headerlink" href="#running-the-workflow" title="Link to this heading"></a></h2>
+<p><strong>3. Run the SPECI workflow using your Jupyter notebook or Python script:</strong>
+Adjust your advanced settings (see the documentation for options like <cite>charge_specified</cite>, <cite>monomers</cite>, etc.) as appropriate for your system.</p>
+<p><strong>4. Structure Generation:</strong>
+SPECI will enumerate all possible complexes based on your input, generating <cite>.xyz</cite> files for each unique species in the <cite>xyz/</cite> directory.
+- Each file (e.g., <cite>speciation11.xyz</cite>) contains atomic coordinates in standard XYZ format and can be visualized with tools like Avogadro or Jmol.</p>
+<p><strong>5. Preparing for Quantum Chemical Optimization:</strong>
+For each selected structure, SPECI automatically generates a Gaussian input file (e.g., <cite>speciation2.com</cite>) in the <cite>com/</cite> directory, including resource directives and geometry.</p>
+<p>Example <cite>.com</cite> file excerpt:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>%chk=speciation2.chk
+%nprocshared=16
+%mem=32GB
+#p opt=loose PM7 scf=xqc
+
+ speciation study
+
+-1 1
+O         -0.13084        1.40090        0.09222
+C          0.45868        2.66483        0.40627
+...
+</pre></div>
+</div>
+<p><strong>Note:</strong> Edit the Gaussian input as needed for your cluster, memory, or computational method.</p>
+</section>
+<section id="analyzing-output">
+<h2>Analyzing Output<a class="headerlink" href="#analyzing-output" title="Link to this heading"></a></h2>
+<p><strong>6. Viewing 3D Structures:</strong>
+Open any <cite>.xyz</cite> file in the <cite>xyz/</cite> folder to inspect the generated actinide complex geometries.</p>
+<p><strong>7. Reviewing Energies and Results:</strong>
+After quantum calculations and parsing, SPECI outputs <cite>atom_energy_index_combined_output.csv</cite>, containing energy values and associated structure indices. This allows rapid ranking and comparison of possible complexes.</p>
+<p>Example excerpt:</p>
+<div class="highlight-csv notranslate"><div class="highlight"><pre><span></span>85_energy,85_index,114_energy,114_index,...
+524.68,0,1173.75,1,...
+</pre></div>
+</div>
+<p>Each column pair gives the computed energy for a structure and its index. Use this file to identify the most stable complexes.</p>
+</section>
+<section id="tips-best-practices">
+<h2>Tips &amp; Best Practices<a class="headerlink" href="#tips-best-practices" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Fragment matching:</strong> Names in your CSV and <cite>.ct</cite> files must match exactly.</p></li>
+<li><p><strong>Visualization:</strong> Inspect <cite>.xyz</cite> files to verify bonding and coordination.</p></li>
+<li><p><strong>Computation:</strong> Adjust Gaussian settings for your hardware and use appropriate quantum chemical methods.</p></li>
+<li><p><strong>Result analysis:</strong> Use the energy CSV to guide further kinetic or thermodynamic modeling.</p></li>
+</ul>
+</section>
+<section id="references-further-reading">
+<h2>References &amp; Further Reading<a class="headerlink" href="#references-further-reading" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>See the [General Input Files](general_input_files.html) and [General Output Files](general_ouput_files.html) documentation for more information about file formats.</p></li>
+<li><p>For troubleshooting or more complex systems (e.g., polynuclear actinide clusters), consult the SPECI [README](<a class="reference external" href="https://github.com/Manting-Mu/OLIGO">https://github.com/Manting-Mu/OLIGO</a>) and example notebooks.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="solvent_coordination.html" class="btn btn-neutral float-left" title="Solvent Coordination: Example Case Study (LiTMP/THF)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="bimetallic_IIP.html" class="btn btn-neutral float-right" title="Bimetallic IIP: Example Case Study" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

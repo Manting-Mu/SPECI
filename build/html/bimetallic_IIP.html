@@ -1,0 +1,194 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bimetallic IIP: Example Case Study &mdash; SPECI 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="AUTOCOPASI: Installation &amp; Setup" href="installation-MKM.html" />
+    <link rel="prev" title="Actinide Complexes: Example Case Study" href="actinide_complexes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SPECI
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_input_files.html">General Input Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_input_files.html#input-settings">Input Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_input_files.html#additional-settings-for-advanced-users">Additional Settings for Advanced Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_ouput_files.html">General Output Files</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="solvent_coordination.html">Solvent Coordination: Example Case Study (LiTMP/THF)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="actinide_complexes.html">Actinide Complexes: Example Case Study</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Bimetallic IIP: Example Case Study</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview-workflow">Overview &amp; Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-directory-structure">Example Directory Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#customization-expansion">Customization &amp; Expansion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#best-practices-tips">Best Practices &amp; Tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#references-further-reading">References &amp; Further Reading</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Automated Microkinetic Modelling</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation-MKM.html">AUTOCOPASI: Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_usage-MKM.html">Example Usage: SPECI-AUTOCOPASI Integration</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SPECI</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Bimetallic IIP: Example Case Study</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/bimetallic_IIP.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="bimetallic-iip-example-case-study">
+<h1>Bimetallic IIP: Example Case Study<a class="headerlink" href="#bimetallic-iip-example-case-study" title="Link to this heading"></a></h1>
+<p>This case study demonstrates how SPECI can be used to generate and explore bimetallic interacting ion pairs (IIPs), with an emphasis on customizing the workflow for complex systems. The folders <cite>common_connection_tables</cite>, <cite>SSIP</cite>, and <cite>IIP</cite> document the complete process, from individual speciation to bimetallic pair assembly.</p>
+<section id="overview-workflow">
+<h2>Overview &amp; Workflow<a class="headerlink" href="#overview-workflow" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>SSIP Generation</strong>
+The first stage involves generating and optimizing <em>single-species ion pairs</em> (SSIPs) for both cations and anions.
+- All possible coordination environments are enumerated.
+- Filtered, chemically reasonable structures are optimized at the DFT level (see <cite>SSIP</cite> folder for input/output).</p></li>
+<li><p><strong>Dummy Atom Embedding</strong>
+In this study, a dummy atom approach was used:
+- <em>Lithium (Li) atoms</em> are temporarily introduced to facilitate the embedding and geometry construction around magnesium (Mg) centers.
+- This approach allows for improved sampling of plausible bimetallic geometries before Li is replaced by Mg for the final analysis.</p></li>
+<li><p><strong>IIP Generation and Selection</strong>
+Interacting ion pairs (IIPs) are explicitly constructed from the SSIP pool:
+- For this example, only the <em>highest</em> and <em>lowest</em> coordinated sodium (Na) cations were used to demonstrate the IIP construction process.
+- To <strong>expand the search</strong>, users can simply add the XYZ coordinates of additional cation (or anion) structures of interest into the relevant input folders (<cite>cat</cite>, <cite>ani</cite>) and rerun the IIP workflow.
+- The script will automatically generate new IIPs using all supplied species.</p></li>
+<li><p><strong>IIP Structure Generation</strong>
+- The filtered, DFT-optimized SSIP cation and anion XYZ files are combined using the IIP search algorithm.
+- The algorithm explores a range of initial placements and orientations, ensuring realistic starting geometries for bimetallic IIPs.
+- The resulting IIP structures are saved as XYZ files in the output directory.</p></li>
+</ol>
+</section>
+<section id="example-directory-structure">
+<h2>Example Directory Structure<a class="headerlink" href="#example-directory-structure" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>common_connection_tables/</cite> — Lookup tables and templates for bond/connectivity enumeration.</p></li>
+<li><p><cite>SSIP/</cite> — Contains all cation and anion single-species structure files, DFT optimization inputs/outputs, and filtered lists.</p></li>
+<li><p><cite>IIP/</cite>
+- <cite>cat/</cite> — Folder containing filtered cation XYZ files (e.g., highest and lowest coordinated Na).
+- <cite>ani/</cite> — Folder containing filtered anion XYZ files.
+- <cite>generated_xyz/</cite> — Output folder where all generated IIP XYZ structures are stored.</p></li>
+</ul>
+</section>
+<section id="customization-expansion">
+<h2>Customization &amp; Expansion<a class="headerlink" href="#customization-expansion" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Expanding the IIP Search:</strong>
+To include more cation/anion combinations, users simply copy their XYZ files into the respective <cite>cat</cite> and <cite>ani</cite> directories and rerun the IIP workflow.
+The script will handle all valid pairings automatically.</p></li>
+<li><p><strong>Dummy Atom Guidance:</strong>
+If a dummy atom is needed for better geometry initialization (e.g., Li for Mg), ensure your XYZ and input files are labeled and handled accordingly.
+Replace the dummy atom with the desired element in final post-processing steps.</p></li>
+<li><p><strong>Advanced Filtering:</strong>
+Users may wish to optimise and filter candidate SSIPs further at DFT level before IIP generation for efficiency or to focus on physically relevant species.</p></li>
+</ul>
+</section>
+<section id="best-practices-tips">
+<h2>Best Practices &amp; Tips<a class="headerlink" href="#best-practices-tips" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Check structure validity</strong> before and after DFT optimization.</p></li>
+<li><p><strong>Visualize</strong> generated IIP structures to confirm plausible geometries and identify any anomalies.</p></li>
+<li><p><strong>Documentation:</strong>
+Comment and document any changes you make to the input pool, dummy atom assignments, or IIP search parameters for reproducibility.</p></li>
+</ul>
+</section>
+<section id="references-further-reading">
+<h2>References &amp; Further Reading<a class="headerlink" href="#references-further-reading" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>See [General Input Files](general_input_files.html) and [General Output Files](general_ouput_files.html) for broader information on file structure and workflow.</p></li>
+<li><p>Consult the example scripts and Jupyter notebooks in the main SPECI repository for automation and troubleshooting.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="actinide_complexes.html" class="btn btn-neutral float-left" title="Actinide Complexes: Example Case Study" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="installation-MKM.html" class="btn btn-neutral float-right" title="AUTOCOPASI: Installation &amp; Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

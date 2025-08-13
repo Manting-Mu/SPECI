@@ -1,0 +1,219 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AUTOCOPASI: Installation &amp; Setup &mdash; SPECI 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Example Usage: SPECI-AUTOCOPASI Integration" href="example_usage-MKM.html" />
+    <link rel="prev" title="Bimetallic IIP: Example Case Study" href="bimetallic_IIP.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SPECI
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_input_files.html">General Input Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_input_files.html#input-settings">Input Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_input_files.html#additional-settings-for-advanced-users">Additional Settings for Advanced Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_ouput_files.html">General Output Files</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="solvent_coordination.html">Solvent Coordination: Example Case Study (LiTMP/THF)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="actinide_complexes.html">Actinide Complexes: Example Case Study</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bimetallic_IIP.html">Bimetallic IIP: Example Case Study</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Automated Microkinetic Modelling</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">AUTOCOPASI: Installation &amp; Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#obtaining-autocopasi">Obtaining AUTOCOPASI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-environment-setup">Python Environment Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage-integration">Usage &amp; Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#best-practices">Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting-support">Troubleshooting &amp; Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#references-related-links">References &amp; Related Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="example_usage-MKM.html">Example Usage: SPECI-AUTOCOPASI Integration</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SPECI</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">AUTOCOPASI: Installation &amp; Setup</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/installation-MKM.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="autocopasi-installation-setup">
+<h1>AUTOCOPASI: Installation &amp; Setup<a class="headerlink" href="#autocopasi-installation-setup" title="Link to this heading"></a></h1>
+<p>AUTOCOPASI is a Python script designed to automate the setup and analysis of kinetic models for chemical reaction networks, particularly those generated by SPECI. This guide covers how to obtain, install, and configure AUTOCOPASI for integration with your workflows.</p>
+<section id="obtaining-autocopasi">
+<h2>Obtaining AUTOCOPASI<a class="headerlink" href="#obtaining-autocopasi" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Download the Code</strong></p>
+<p>AUTOCOPASI is distributed as a Python script and can be obtained from:
+- The [main SPECI repository](<a class="reference external" href="https://github.com/Manting-Mu/OLIGO">https://github.com/Manting-Mu/OLIGO</a>) (if included)
+- Or, directly from the <cite>AUTOCOPASI.zip</cite> archive provided.</p>
+</li>
+<li><p><strong>Extract the Files</strong></p>
+<p>If you have a ZIP archive (e.g., <cite>AUTOCOPASI.zip</cite>), extract it to your desired location using your system’s file explorer or the terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>unzip<span class="w"> </span>AUTOCOPASI.zip
+</pre></div>
+</div>
+<p>This will create a folder containing the AUTOCOPASI Python scripts and associated files.</p>
+</li>
+</ol>
+</section>
+<section id="python-environment-setup">
+<h2>Python Environment Setup<a class="headerlink" href="#python-environment-setup" title="Link to this heading"></a></h2>
+<p>AUTOCOPASI is compatible with Python 3 and requires a small set of dependencies. It is recommended to use the same Conda environment as SPECI for seamless workflow integration.</p>
+<ol class="arabic">
+<li><p><strong>Ensure Python is Installed</strong></p>
+<p>SPECI’s recommended environment (<cite>speci-env</cite>) includes all typical dependencies.</p>
+</li>
+<li><p><strong>Install Required Packages (if needed)</strong></p>
+<p>If using a separate environment, ensure the following packages are available:</p>
+<ul class="simple">
+<li><p><cite>pandas</cite></p></li>
+<li><p><cite>numpy</cite></p></li>
+<li><p><cite>lxml</cite></p></li>
+<li><p><cite>xml.etree.ElementTree</cite> (standard in Python 3)</p></li>
+<li><p>Any other libraries specified in the AUTOCOPASI README or requirements.txt</p></li>
+</ul>
+<p>Install them with pip if needed:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>pandas<span class="w"> </span>numpy<span class="w"> </span>lxml
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="usage-integration">
+<h2>Usage &amp; Integration<a class="headerlink" href="#usage-integration" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Running AUTOCOPASI</strong></p>
+<p>Navigate to the AUTOCOPASI directory and run the main script, e.g.:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>AUTOCOPASI.py
+</pre></div>
+</div>
+<p>(Replace <cite>AUTOCOPASI.py</cite> with the actual script name if different.)</p>
+</li>
+<li><p><strong>Input Files</strong></p>
+<ul class="simple">
+<li><p>AUTOCOPASI expects input files (reaction network, species list, kinetic parameters) generated by SPECI or prepared manually.</p></li>
+<li><p>Make sure all paths and filenames are correct and adjust any configuration variables as needed.</p></li>
+</ul>
+</li>
+<li><p><strong>Output</strong></p>
+<ul class="simple">
+<li><p>Results (COPASI models, kinetic analysis, simulation outputs) will be saved in the output directory specified in the script.</p></li>
+<li><p>Review the output files for COPASI-compatible formats (<cite>.cps</cite>, <cite>.xml</cite>) for further simulation and visualization.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="best-practices">
+<h2>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Keep AUTOCOPASI scripts together with your project files for reproducibility.</p></li>
+<li><p>Always check the script header or README for specific requirements, updates, or usage notes.</p></li>
+<li><p>For detailed kinetic analysis, consider visualizing results directly in [COPASI](<a class="reference external" href="https://copasi.org/">https://copasi.org/</a>).</p></li>
+</ul>
+</section>
+<section id="troubleshooting-support">
+<h2>Troubleshooting &amp; Support<a class="headerlink" href="#troubleshooting-support" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>For issues running AUTOCOPASI, consult error messages for missing dependencies or file path errors.</p></li>
+<li><p>If additional help is needed, open an issue on the main repository or contact the script author.</p></li>
+</ul>
+</section>
+<section id="references-related-links">
+<h2>References &amp; Related Links<a class="headerlink" href="#references-related-links" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>[COPASI Project](<a class="reference external" href="https://copasi.org/">https://copasi.org/</a>)</p></li>
+<li><p>[SPECI Documentation](index.html)</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="bimetallic_IIP.html" class="btn btn-neutral float-left" title="Bimetallic IIP: Example Case Study" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="example_usage-MKM.html" class="btn btn-neutral float-right" title="Example Usage: SPECI-AUTOCOPASI Integration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

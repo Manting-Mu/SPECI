@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>General Input Files &mdash; SPECI 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="General Output Files" href="general_ouput_files.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SPECI
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">General Input Files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#input-file-types">Input File Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-component-data-csv">Example: Component Data CSV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tips-for-creating-input-files">Tips for Creating Input Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#location-of-input-files">Location of Input Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#input-settings">Input Settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#graph-generation-parameters">Graph Generation Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#additional-settings-for-advanced-users">Additional Settings for Advanced Users</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#d-to-3d-structure-embedding-settings">2D to 3D Structure Embedding Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#xyz-structure-optimization-and-gaussian-input">XYZ Structure Optimization and Gaussian Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gaussian-output-interpretation-data-export">Gaussian Output Interpretation &amp; Data Export</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interacting-ion-pair-iip-generation">Interacting Ion Pair (IIP) Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#important-notes">Important Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="general_ouput_files.html">General Output Files</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="solvent_coordination.html">Solvent Coordination: Example Case Study (LiTMP/THF)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="actinide_complexes.html">Actinide Complexes: Example Case Study</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bimetallic_IIP.html">Bimetallic IIP: Example Case Study</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Automated Microkinetic Modelling</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation-MKM.html">AUTOCOPASI: Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_usage-MKM.html">Example Usage: SPECI-AUTOCOPASI Integration</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SPECI</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">General Input Files</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/general_input_files.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="general-input-files">
+<h1>General Input Files<a class="headerlink" href="#general-input-files" title="Link to this heading"></a></h1>
+<p>SPECI uses structured input files to define chemical systems for automated speciation analysis. The main input file format is CSV, typically located in the <cite>inputs_template/</cite> directory or provided as examples in the <cite>examples/</cite> folder.</p>
+<section id="input-file-types">
+<h2>Input File Types<a class="headerlink" href="#input-file-types" title="Link to this heading"></a></h2>
+<ul>
+<li><p><strong>Component Data (`components-data.csv`):</strong>
+- Contains the list of all components (e.g., metals, ligands, solvents) and their relevant properties.
+- <strong>Required columns:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>components</cite> — Unique name/label for each fragment. Fragments should be defined so that no bonds are broken or formed within a fragment. For multidentate ligands, specify each donor atom with <cite>Donor</cite> + ligand name + bonding atom (e.g., <cite>DonorLN2N1</cite>). The code recognizes multidentate ligands if <cite>Donor</cite> is present in the name.</p></li>
+<li><p><cite>charge</cite> — Net charge of the component, or (for multidentate ligands) the charge contributed by the bonding atom.</p></li>
+<li><p><cite>connectivity allowed</cite> — List the allowed number of connectivities for the bonding atom with other fragments (e.g., <cite>“0, 1, 2”</cite>). If <cite>0</cite> is included, the component may be omitted from some molecules.</p></li>
+<li><p><cite>donor atom</cite> — The element type of the bonding atom (e.g., N, O, C).</p></li>
+<li><p><cite>type</cite> — The role of the component (e.g., metal, ligand). If a ligand is multidentate, type it as <cite>ligand</cite>. Neutral monodentate ligands should also be marked as donor ligands.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Structure Files (.ct):</strong>
+- For each component, a ChemDraw <cite>.ct</cite> file is required, showing explicit H atoms.
+- Bonding atoms in ChemDraw must be labeled as <cite>Node</cite> for metals/ligands, and as <cite>Nod1</cite>, <cite>Nod2</cite>, etc. for multidentate donor ligands.</p></li>
+</ul>
+</section>
+<section id="example-component-data-csv">
+<h2>Example: Component Data CSV<a class="headerlink" href="#example-component-data-csv" title="Link to this heading"></a></h2>
+<div class="highlight-csv notranslate"><div class="highlight"><pre><span></span>components,charge,connectivity allowed,donor atom,type
+Mg,2,&quot;0, 1, 2, 3, 4&quot;,Mg,metal
+OEt2,0,&quot;0, 1&quot;,O,ligand
+R,-1,&quot;0, 1&quot;,C,ligand
+DonorLN2N1,-1,&quot;0, 1&quot;,N,ligand
+DonorLN2N2,-1,&quot;0, 1, 2&quot;,N,ligand
+</pre></div>
+</div>
+<p>(Your file may contain additional components and columns as needed.)</p>
+</section>
+<section id="tips-for-creating-input-files">
+<h2>Tips for Creating Input Files<a class="headerlink" href="#tips-for-creating-input-files" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Copy an example CSV from the <cite>inputs_template/</cite> or <cite>examples/</cite> folder.</p></li>
+<li><p>Ensure all required columns are filled for each component.</p></li>
+<li><p>Check for correct naming, charge, and donor atom specification, especially for multidentate ligands.</p></li>
+<li><p>Save all <cite>.ct</cite> structure files with the exact same names as the fragments in the CSV.</p></li>
+</ul>
+</section>
+<section id="location-of-input-files">
+<h2>Location of Input Files<a class="headerlink" href="#location-of-input-files" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Place input files in your working directory or reference them in your scripts/notebooks.</p></li>
+<li><p>Example input sets and templates are in the <cite>examples/</cite> and <cite>inputs_template/</cite> folders.</p></li>
+</ul>
+</section>
+</section>
+<section id="input-settings">
+<h1>Input Settings<a class="headerlink" href="#input-settings" title="Link to this heading"></a></h1>
+<p>The following <strong>Python variables and functions</strong> control aspects of graph generation. These should be edited directly in the Jupyter notebook (see <cite>SPECI.ipynb</cite>).</p>
+<section id="graph-generation-parameters">
+<h2>Graph Generation Parameters<a class="headerlink" href="#graph-generation-parameters" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">charge_specified</span> <span class="o">=</span> <span class="mi">0</span>              <span class="c1"># Total charge of the species to generate</span>
+<span class="n">monomers</span> <span class="o">=</span> <span class="mi">2</span>                      <span class="c1"># Maximum number of repeats per fragment/component in the species</span>
+<span class="n">donor_M_connection</span> <span class="o">=</span> <span class="mi">6</span>            <span class="c1"># Maximum number of connections between metals (M) and donor atoms</span>
+<span class="n">donor_as_bridgeing</span> <span class="o">=</span> <span class="kc">False</span>        <span class="c1"># Set True if using donor ligand to describe a charged multidentate ligand</span>
+<span class="n">center</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Mg&#39;</span><span class="p">,</span> <span class="s1">&#39;Na&#39;</span><span class="p">]</span>             <span class="c1"># Metal centers for filtering out 3D structures with close metal–atom contacts</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;components-data.csv&#39;</span><span class="p">)</span>   <span class="c1"># Path to fragment property CSV file</span>
+<span class="n">user_specified_atomcount_controll</span> <span class="o">=</span> <span class="p">[]</span>    <span class="c1"># Example: [(&#39;component1&#39;, 2), (&#39;component2&#39;, 1)]</span>
+<span class="n">bonds_not_constructed</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;Na&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">)]</span>     <span class="c1"># Prevents certain bonds from being constructed</span>
+<span class="n">num_cores</span> <span class="o">=</span> <span class="mi">7</span>                     <span class="c1"># Number of CPU cores to use (set 7 for an 8-core machine, etc.)</span>
+<span class="n">dummy_atom_needed</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Mg&#39;</span><span class="p">,</span> <span class="s1">&#39;Li&#39;</span><span class="p">]</span>  <span class="c1"># Specify if dummy atoms are needed in the structure</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Adjust these parameters according to your chemical system and computational resources.</p></li>
+<li><p><cite>user_specified_atomcount_controll</cite> lets you limit the number of certain fragments in each generated species.</p></li>
+<li><p><cite>bonds_not_constructed</cite> prevents the program from forming bonds between specific components.</p></li>
+</ul>
+</section>
+</section>
+<section id="additional-settings-for-advanced-users">
+<h1>Additional Settings for Advanced Users<a class="headerlink" href="#additional-settings-for-advanced-users" title="Link to this heading"></a></h1>
+<p>The following <strong>Python variables and functions</strong> control advanced aspects of structure embedding and output. Most are set directly in the Jupyter notebook (see <cite>SPECI.ipynb</cite>).</p>
+<section id="d-to-3d-structure-embedding-settings">
+<h2>2D to 3D Structure Embedding Settings<a class="headerlink" href="#d-to-3d-structure-embedding-settings" title="Link to this heading"></a></h2>
+<p>You may need to adjust the <strong>atomic distance thresholds</strong> for filtering out poor 3D structures:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">passes_non_H_threshold</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">1.6</span><span class="p">):</span>   <span class="c1"># Change threshold as needed</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">passes_all_thresholds</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="n">non_H_threshold</span><span class="o">=</span><span class="mf">1.6</span><span class="p">,</span> <span class="n">all_atom_threshold</span><span class="o">=</span><span class="mf">0.9</span><span class="p">):</span> <span class="c1"># Adjust thresholds</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Default thresholds (in Å) are typically sufficient, but you can tighten or loosen them for challenging systems.</p></li>
+</ul>
+</section>
+<section id="xyz-structure-optimization-and-gaussian-input">
+<h2>XYZ Structure Optimization and Gaussian Input<a class="headerlink" href="#xyz-structure-optimization-and-gaussian-input" title="Link to this heading"></a></h2>
+<p>To optimize 3D structures using quantum chemistry (e.g., Gaussian):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">totla_structure_num</span> <span class="o">=</span> <span class="mi">100</span>     <span class="c1"># Total number of structures to model (should be at least 3x number of groups)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Custom Gaussian input file generation (example):</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;speciation&#39;</span>
+<span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">collected_indices</span><span class="p">:</span>
+    <span class="n">new_comfile</span> <span class="o">=</span> <span class="n">name</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.com&#39;</span>
+    <span class="nb">open</span><span class="p">(</span><span class="n">new_comfile</span><span class="p">,</span> <span class="s1">&#39;+a&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%c</span><span class="s1">hk=&#39;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.chk&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span>
+                                  <span class="s1">&#39;%nprocshared=16</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span>
+                                  <span class="s1">&#39;%mem=32GB</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span>
+                                  <span class="s1">&#39;#p opt=loose PM7 freq scf=xqc </span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span>
+                                  <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> speciation study</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span>
+                                  <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">-1 1</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;speciation&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.xyz&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="mi">2</span><span class="p">:]:</span>
+        <span class="nb">open</span><span class="p">(</span><span class="n">new_comfile</span><span class="p">,</span> <span class="s1">&#39;+a&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="nb">open</span><span class="p">(</span><span class="n">new_comfile</span><span class="p">,</span> <span class="s1">&#39;+a&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Note:</strong> Users must adapt these templates to their own cluster/scheduler and level of theory. Advanced computational chemistry experience is required.</p></li>
+</ul>
+</section>
+<section id="gaussian-output-interpretation-data-export">
+<h2>Gaussian Output Interpretation &amp; Data Export<a class="headerlink" href="#gaussian-output-interpretation-data-export" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">directory_path</span> <span class="o">=</span> <span class="s2">&quot;/path/to/your/PM7-log&quot;</span>    <span class="c1"># Specify your Gaussian log file directory</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;/path/to/DFT_Energies.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>   <span class="c1"># Path to save energies/results</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Make sure you update the paths for your own system.</p></li>
+</ul>
+</section>
+<section id="interacting-ion-pair-iip-generation">
+<h2>Interacting Ion Pair (IIP) Generation<a class="headerlink" href="#interacting-ion-pair-iip-generation" title="Link to this heading"></a></h2>
+<p>If using the IIP feature for ion pair generation:</p>
+<ul class="simple">
+<li><p>Cation and anion XYZ files must be pre-generated and placed in folders named <cite>cat</cite> and <cite>ani</cite>.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">random_placement_all</span><span class="p">(</span><span class="n">cation</span><span class="p">,</span> <span class="n">anion</span><span class="p">,</span> <span class="n">initial_distance</span><span class="o">=</span><span class="mf">50.0</span><span class="p">,</span> <span class="n">final_distance</span><span class="o">=</span><span class="mf">2.5</span><span class="p">):</span>
+    <span class="c1"># Adjust final_distance as needed for closest approach</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rotation_angles</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">240</span><span class="p">]</span>   <span class="c1"># Customize rotation sampling</span>
+<span class="n">sorted_finals</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">all_final_structs</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])[:</span><span class="mi">10</span><span class="p">]</span>   <span class="c1"># Keep top N structures</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usage:</span>
+<span class="n">base_dir</span> <span class="o">=</span> <span class="s1">&#39;/path/to/IIP/cat2ani2&#39;</span>    <span class="c1"># Set your working directory</span>
+<span class="n">generate_combinations</span><span class="p">(</span><span class="n">base_dir</span><span class="p">,</span> <span class="n">cation_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">anion_count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>    <span class="c1"># Specify number of cations/anions</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Output IIP XYZs will be saved to the <cite>generated_xyz</cite> folder.</p></li>
+</ul>
+</section>
+<section id="important-notes">
+<h2>Important Notes<a class="headerlink" href="#important-notes" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Advanced features require <strong>prior experience with computational chemistry software</strong> (e.g., Gaussian).</p></li>
+<li><p>Always review and adapt Python scripts and computational job settings for your hardware and chemical system.</p></li>
+<li><p>For help and troubleshooting, consult the [GitHub repository](<a class="reference external" href="https://github.com/Manting-Mu/OLIGO/issues">https://github.com/Manting-Mu/OLIGO/issues</a>) or example notebooks.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="general_ouput_files.html" class="btn btn-neutral float-right" title="General Output Files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

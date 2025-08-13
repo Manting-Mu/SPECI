@@ -1,0 +1,230 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>General Output Files &mdash; SPECI 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Solvent Coordination: Example Case Study (LiTMP/THF)" href="solvent_coordination.html" />
+    <link rel="prev" title="General Input Files" href="general_input_files.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SPECI
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_input_files.html">General Input Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_input_files.html#input-settings">Input Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_input_files.html#additional-settings-for-advanced-users">Additional Settings for Advanced Users</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">General Output Files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#output-file-types">Output File Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#output-file-locations">Output File Locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interpreting-output-files">Interpreting Output Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#typical-workflow-example">Typical Workflow Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting-and-tips">Troubleshooting and Tips</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="solvent_coordination.html">Solvent Coordination: Example Case Study (LiTMP/THF)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="actinide_complexes.html">Actinide Complexes: Example Case Study</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bimetallic_IIP.html">Bimetallic IIP: Example Case Study</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Automated Microkinetic Modelling</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation-MKM.html">AUTOCOPASI: Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_usage-MKM.html">Example Usage: SPECI-AUTOCOPASI Integration</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SPECI</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">General Output Files</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/general_ouput_files.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="general-output-files">
+<h1>General Output Files<a class="headerlink" href="#general-output-files" title="Link to this heading"></a></h1>
+<p>SPECI generates a range of output files throughout the speciation, graph enumeration, structure generation, and microkinetic modeling workflow. These outputs allow users to analyze the predicted speciation, view generated structures, and prepare for further computational modeling.</p>
+<section id="output-file-types">
+<h2>Output File Types<a class="headerlink" href="#output-file-types" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Speciation Summary CSV Files</strong>
+- Main results file summarizing all generated species, their formulas, abundances, charges, and calculated energies.
+- Example output file: <code class="docutils literal notranslate"><span class="pre">species_summary.csv</span></code>
+- <strong>Typical columns:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>species</cite> — Name or formula of the species (e.g., <cite>[UO2(L1)2(NO3)2]</cite>)</p></li>
+<li><p><cite>abundance</cite> — Relative or absolute abundance predicted</p></li>
+<li><p><cite>energy</cite> — Calculated energy (e.g., from DFT or semi-empirical method)</p></li>
+<li><p><cite>charge</cite> — Net charge</p></li>
+<li><p>Additional information such as number of atoms/fragments, or SMILES strings may be included.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Generated Structure Files</strong>
+- For each enumerated species, 3D Cartesian coordinate files are created (XYZ format), typically named after the species.
+- Example: <code class="docutils literal notranslate"><span class="pre">speciation42.xyz</span></code>
+- These files store the atomic coordinates and can be visualized using molecular visualization software (e.g., Jmol, Avogadro).</p></li>
+<li><p><strong>Structure Optimization Input/Output</strong>
+- If quantum chemical optimizations are performed, SPECI will generate:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Gaussian input files</strong> (<code class="docutils literal notranslate"><span class="pre">.com</span></code>): Files ready to be submitted to Gaussian or similar programs for geometry optimization and frequency analysis.</p></li>
+<li><p><strong>Gaussian output/log files</strong> (<code class="docutils literal notranslate"><span class="pre">.log</span></code>): Results of the quantum chemical calculations, containing optimized energies, frequencies, and thermodynamic data.</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>The script supports automated parsing of these log files to extract Gibbs free energies and other properties.</p></li>
+</ul>
+</li>
+<li><p><strong>Energy Data CSV Files</strong>
+- After parsing the quantum chemistry outputs, SPECI generates CSV files summarizing the calculated energies for each species.
+- Example: <code class="docutils literal notranslate"><span class="pre">DFT_Energies.csv</span></code>
+- <strong>Columns:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>species</cite> — Name or index of the species</p></li>
+<li><p><cite>Gibbs_energy</cite> — Gibbs free energy (extracted from frequency calculation)</p></li>
+<li><p><cite>other thermochemical data</cite> — May include enthalpy, entropy, etc.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Microkinetic Modeling Output</strong>
+- If using the automated microkinetic modeling features (e.g., with AUTOCOPASI), SPECI generates:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Reaction network files</strong> — List of all generated reactions with stoichiometry and predicted rate constants.</p></li>
+<li><p><strong>Simulation input files</strong> — Input for downstream kinetic modeling software.</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>These are typically stored as CSV or TXT files.</p></li>
+</ul>
+</li>
+<li><p><strong>IIP (Interacting Ion Pair) Generation Output</strong>
+- When using the IIP protocol, SPECI outputs new XYZ files for each generated ion pair combination.
+- Results are stored in the <code class="docutils literal notranslate"><span class="pre">generated_xyz</span></code> folder within your working directory.</p></li>
+</ol>
+</section>
+<section id="output-file-locations">
+<h2>Output File Locations<a class="headerlink" href="#output-file-locations" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>By default, output files are written to the same directory as your script or notebook, or to subfolders such as <cite>outputs/</cite>, <cite>examples/</cite>, or <cite>generated_xyz/</cite>.</p></li>
+<li><p>File naming conventions are consistent and based on species name or index (e.g., <code class="docutils literal notranslate"><span class="pre">speciation1.xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">speciation1.com</span></code>, etc.).</p></li>
+<li><p>Gaussian input/output files and parsed energy CSVs are typically kept together for ease of analysis.</p></li>
+</ul>
+</section>
+<section id="interpreting-output-files">
+<h2>Interpreting Output Files<a class="headerlink" href="#interpreting-output-files" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Species summary CSVs</strong>: High-abundance species are the most likely/thermodynamically favorable under your input conditions.</p></li>
+<li><p><strong>3D structures</strong>: Visualize XYZ files with molecular viewers to check geometry and binding modes.</p></li>
+<li><p><strong>Gaussian/computed energy data</strong>: Use energy CSVs to compare stabilities or for further kinetic modeling.</p></li>
+<li><p><strong>Microkinetic outputs</strong>: Import reaction network and simulation input files into kinetic modeling programs (e.g., AUTOCOPASI) for dynamic simulations.</p></li>
+<li><p><strong>IIP outputs</strong>: Generated XYZs represent different spatial arrangements and distances of cation-anion pairs.</p></li>
+</ul>
+</section>
+<section id="typical-workflow-example">
+<h2>Typical Workflow Example<a class="headerlink" href="#typical-workflow-example" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Run SPECI to generate <code class="docutils literal notranslate"><span class="pre">species_summary.csv</span></code> and <code class="docutils literal notranslate"><span class="pre">speciationXX.xyz</span></code> files.</p></li>
+<li><p>(Optional) Optimize selected XYZ files with Gaussian, producing <code class="docutils literal notranslate"><span class="pre">.com</span></code> and <code class="docutils literal notranslate"><span class="pre">.log</span></code> files.</p></li>
+<li><p>Parse Gaussian logs to extract Gibbs energies, save to <code class="docutils literal notranslate"><span class="pre">DFT_Energies.csv</span></code>.</p></li>
+<li><p>Use outputs as input for downstream kinetic modeling or further analysis.</p></li>
+</ol>
+</section>
+<section id="troubleshooting-and-tips">
+<h2>Troubleshooting and Tips<a class="headerlink" href="#troubleshooting-and-tips" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Always check that all expected files are generated—missing output often means an error occurred in structure generation or computation.</p></li>
+<li><p>File paths and naming conventions are customizable; adjust scripts as needed for your own folder structure.</p></li>
+<li><p>For more advanced automation or integration with other programs, adapt the output parsing scripts provided in SPECI.</p></li>
+</ul>
+<p>For more details and example outputs, refer to the <code class="docutils literal notranslate"><span class="pre">examples/</span></code> folder or the SPECI Jupyter notebook (<code class="docutils literal notranslate"><span class="pre">SPECI.ipynb</span></code>).</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="general_input_files.html" class="btn btn-neutral float-left" title="General Input Files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="solvent_coordination.html" class="btn btn-neutral float-right" title="Solvent Coordination: Example Case Study (LiTMP/THF)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

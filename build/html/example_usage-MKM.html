@@ -1,0 +1,222 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Example Usage: SPECI-AUTOCOPASI Integration &mdash; SPECI 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="AUTOCOPASI: Installation &amp; Setup" href="installation-MKM.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SPECI
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_input_files.html">General Input Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_input_files.html#input-settings">Input Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_input_files.html#additional-settings-for-advanced-users">Additional Settings for Advanced Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_ouput_files.html">General Output Files</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="solvent_coordination.html">Solvent Coordination: Example Case Study (LiTMP/THF)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="actinide_complexes.html">Actinide Complexes: Example Case Study</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bimetallic_IIP.html">Bimetallic IIP: Example Case Study</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Automated Microkinetic Modelling</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation-MKM.html">AUTOCOPASI: Installation &amp; Setup</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Example Usage: SPECI-AUTOCOPASI Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#automated-input-preparation-from-speci">Automated Input Preparation from SPECI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-speci-autocopasi-workflow">Running the SPECI-AUTOCOPASI Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#copasi-script-execution-output">COPASI Script Execution &amp; Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#references-links">References &amp; Links</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SPECI</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Example Usage: SPECI-AUTOCOPASI Integration</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/example_usage-MKM.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="example-usage-speci-autocopasi-integration">
+<h1>Example Usage: SPECI-AUTOCOPASI Integration<a class="headerlink" href="#example-usage-speci-autocopasi-integration" title="Link to this heading"></a></h1>
+<p>This guide illustrates how to use the SPECI workflow to prepare kinetic modeling inputs for AUTOCOPASI, automate CSV generation, and run time-course simulations in COPASI. This workflow is suitable for complex species such as CIPs, SSIPs, and IIPs.</p>
+<section id="automated-input-preparation-from-speci">
+<h2>Automated Input Preparation from SPECI<a class="headerlink" href="#automated-input-preparation-from-speci" title="Link to this heading"></a></h2>
+<p><strong>1. Automated Extraction of Energies and Composition</strong></p>
+<ul>
+<li><p><strong>Input Preparation is Fully Automated:</strong>
+The required <cite>.csv</cite> files for AUTOCOPASI are automatically generated by the main SPECI script.
+Simply provide a folder containing all <cite>.log</cite> files (output from quantum chemical calculations) for your species of interest.</p></li>
+<li><p><strong>How to Specify Input Folders:</strong>
+In the main SPECI script, set the <cite>directory_path</cite> to point to the folder containing your log files:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">directory_path</span> <span class="o">=</span> <span class="s2">&quot;/Users/yourname/path/to/PM7-Gibbs/&quot;</span>   <span class="c1"># Location of log files</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Filename Cleaning:</strong>
+The script automatically processes log filenames to extract numerical indexes, ensuring clean, concise labels for each species.
+For IIP calculations, additional cleaning (e.g., removing “<a href="#id1"><span class="problematic" id="id2">lowest10_c2_a1_</span></a>” or other prefixes) is available as code comments.</p>
+<p>Example snippet:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="n">filename</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;speciationDFT&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="c1"># For IIP-specific naming:</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;speciation&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="c1"># Add or modify replace statements as needed</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>CSV Output Locations:</strong>
+Set where you want the main results to be saved:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">out_csv</span> <span class="o">=</span> <span class="s2">&quot;/Users/yourname/path/to/Energies.csv&quot;</span>                <span class="c1"># Energies summary CSV</span>
+<span class="n">csv_path</span> <span class="o">=</span> <span class="s2">&quot;/Users/yourname/path/to/elemental_composition.csv&quot;</span>  <span class="c1"># Composition CSV</span>
+</pre></div>
+</div>
+<p>Make sure to provide the full path for each output.</p>
+</li>
+<li><p><strong>How the CSVs are Used:</strong>
+The main output files (<cite>Energies.csv</cite>, <cite>elemental_composition.csv</cite>) will be used as input for COPASI modeling.</p>
+<p><strong>Note:</strong>
+The filtered elemental composition CSV should also include any energies computed for <em>neutral donor ligands</em> that could dissociate—this is important for modeling ligand exchange equilibria.</p>
+</li>
+</ul>
+<p><strong>2. Flexibility of Workflow Blocks</strong></p>
+<ul class="simple">
+<li><p>Each preparation block (energy extraction, composition mapping, etc.) is modular:
+You can run these blocks <strong>at any time</strong> and in any order, independent of previous runs or information.</p></li>
+<li><p>This makes the workflow robust and easily adaptable for different case studies or new species.</p></li>
+</ul>
+</section>
+<section id="running-the-speci-autocopasi-workflow">
+<h2>Running the SPECI-AUTOCOPASI Workflow<a class="headerlink" href="#running-the-speci-autocopasi-workflow" title="Link to this heading"></a></h2>
+<p>After the SPECI CSVs are generated, specify them for COPASI script input:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">energy_csv</span> <span class="o">=</span> <span class="s2">&quot;/Users/yourname/path/to/Energies.csv&quot;</span>
+<span class="n">composition_csv</span> <span class="o">=</span> <span class="s2">&quot;/Users/yourname/path/to/elemental_composition.csv&quot;</span>
+<span class="n">output_path</span> <span class="o">=</span> <span class="s2">&quot;/Users/yourname/path/to/elementary_reactions.csv&quot;</span>   <span class="c1"># Final input for AUTOCOPASI</span>
+</pre></div>
+</div>
+<p>The file <cite>elementary_reactions.csv</cite> is the <strong>direct input for the AUTOCOPASI script</strong> that will simulate time-dependent concentration profiles.</p>
+</section>
+<section id="copasi-script-execution-output">
+<h2>COPASI Script Execution &amp; Output<a class="headerlink" href="#copasi-script-execution-output" title="Link to this heading"></a></h2>
+<ul>
+<li><p><strong>Running the Script:</strong>
+From your terminal or Python environment, execute the AUTOCOPASI script with the correct CSVs specified.</p></li>
+<li><p><strong>What is Output:</strong>
+- The script generates a COPASI-compatible file with all elementary reactions, kinetic parameters, and initial concentrations.
+- You will receive simulation outputs such as:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Time vs. concentration plots for all species</p></li>
+<li><p>Raw simulation data in <cite>.csv</cite> or <cite>.xml</cite> format (COPASI native)</p></li>
+<li><p>Optionally, visualizations or diagnostic files depending on your setup</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Notes &amp; Best Practices:</strong>
+- Always check that your input CSVs have been generated and cleaned as intended (no duplicate or missing species labels).
+- Make sure to include any relevant neutral donor ligands in your composition file.
+- For expanded studies, simply add new log files to your input folder and rerun the corresponding block.</p></li>
+</ul>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>If you encounter errors, verify all file paths, and make sure there are no formatting issues in your CSVs.</p></li>
+<li><p>Refer to comments in the SPECI and AUTOCOPASI scripts for further customization or to add new naming conventions.</p></li>
+</ul>
+</section>
+<section id="references-links">
+<h2>References &amp; Links<a class="headerlink" href="#references-links" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>See [AUTOCOPASI Installation](AUTOCOPASI_installation.html) for setup instructions.</p></li>
+<li><p>Review the main [SPECI Documentation](index.html) for background and input file formats.</p></li>
+<li><p>For more on kinetic modeling and COPASI, visit the [COPASI Project site](<a class="reference external" href="https://copasi.org/">https://copasi.org/</a>).</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation-MKM.html" class="btn btn-neutral float-left" title="AUTOCOPASI: Installation &amp; Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solvent Coordination: Example Case Study (LiTMP/THF) &mdash; SPECI 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Actinide Complexes: Example Case Study" href="actinide_complexes.html" />
+    <link rel="prev" title="General Output Files" href="general_ouput_files.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SPECI
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_input_files.html">General Input Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_input_files.html#input-settings">Input Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_input_files.html#additional-settings-for-advanced-users">Additional Settings for Advanced Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_ouput_files.html">General Output Files</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Solvent Coordination: Example Case Study (LiTMP/THF)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#directory-overview">Directory Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#input-preparation">Input Preparation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-workflow">Running the Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#analyzing-output">Analyzing Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tips-best-practices">Tips &amp; Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#references-further-reading">References &amp; Further Reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="actinide_complexes.html">Actinide Complexes: Example Case Study</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bimetallic_IIP.html">Bimetallic IIP: Example Case Study</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Automated Microkinetic Modelling</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation-MKM.html">AUTOCOPASI: Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_usage-MKM.html">Example Usage: SPECI-AUTOCOPASI Integration</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SPECI</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Solvent Coordination: Example Case Study (LiTMP/THF)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/solvent_coordination.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="solvent-coordination-example-case-study-litmp-thf">
+<h1>Solvent Coordination: Example Case Study (LiTMP/THF)<a class="headerlink" href="#solvent-coordination-example-case-study-litmp-thf" title="Link to this heading"></a></h1>
+<p>This case study demonstrates how to use SPECI for exploring the speciation and coordination of lithium tetramethylpiperidide (LiTMP) with tetrahydrofuran (THF) solvent. The files in <cite>CASE1_LiTMP-THF</cite> showcase the input setup, structure enumeration, and energy output typical for solvent coordination chemistry problems.</p>
+<section id="directory-overview">
+<h2>Directory Overview<a class="headerlink" href="#directory-overview" title="Link to this heading"></a></h2>
+<p>The <cite>CASE1_LiTMP-THF</cite> example includes:</p>
+<ul class="simple">
+<li><p><cite>components-data.csv</cite> — Describes all system fragments, including lithium, TMP ligand, and THF as a coordinating solvent.</p></li>
+<li><p><cite>ct/</cite> — Contains ChemDraw <cite>.ct</cite> structure files for each fragment.</p></li>
+<li><p><cite>PM7Gibbs_Energies.csv</cite> — Output file summarizing PM7 Gibbs energies for all enumerated species.</p></li>
+<li><p><cite>logfile.rtf</cite> — Execution log for the run.</p></li>
+<li><p>Additional folders (e.g., <cite>xyz/</cite>, <cite>com/</cite>) for 3D structure files and quantum chemistry input files if generated.</p></li>
+</ul>
+</section>
+<section id="input-preparation">
+<h2>Input Preparation<a class="headerlink" href="#input-preparation" title="Link to this heading"></a></h2>
+<p><strong>1. Edit the `components-data.csv` file:</strong></p>
+<p>This CSV specifies the building blocks for SPECI. For LiTMP/THF, it might look like:</p>
+<div class="highlight-csv notranslate"><div class="highlight"><pre><span></span>components,charge,connectivity allowed,donor atom,type
+TMP,-1,&quot;0, 1, 2&quot;,N,ligand
+Li,1,&quot;0, 1, 2, 3, 4&quot;,Li,metal
+DonorTHFO1,0,&quot;0, 1&quot;,O,ligand
+DonorTHFO1,0,&quot;0, 1&quot;,O,ligand
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>TMP</strong> is the tetramethylpiperidide anion.</p></li>
+<li><p><strong>Li</strong> is the metal center.</p></li>
+<li><p><strong>DonorTHFO1</strong> represents THF molecules acting as monodentate donor ligands.</p></li>
+<li><p>The number and identity of fragments control the degree of coordination and aggregation SPECI will explore.</p></li>
+</ul>
+<p><strong>2. Place ChemDraw `.ct` files</strong>
+Ensure that for each component in the CSV, a matching <cite>.ct</cite> file exists in the <cite>ct/</cite> directory (e.g., <cite>TMP.ct</cite>, <cite>Li.ct</cite>, <cite>THF.ct</cite>).</p>
+</section>
+<section id="running-the-workflow">
+<h2>Running the Workflow<a class="headerlink" href="#running-the-workflow" title="Link to this heading"></a></h2>
+<p><strong>3. Run the SPECI workflow:</strong>
+- Launch the Jupyter notebook or run your Python workflow script.
+- Adjust any relevant advanced settings (see documentation for parameters such as <cite>charge_specified</cite>, <cite>monomers</cite>, or <cite>num_cores</cite>).</p>
+<p><strong>4. Structure Generation:</strong>
+- SPECI will enumerate all unique species formed by different possible combinations and connectivities of Li, TMP, and THF.
+- 3D coordinates (if generated) will be saved as <cite>.xyz</cite> files in the <cite>xyz/</cite> directory.
+- Quantum chemical input files (e.g., for PM7, UFF, or DFT) may be generated in the <cite>com/</cite> directory.</p>
+</section>
+<section id="analyzing-output">
+<h2>Analyzing Output<a class="headerlink" href="#analyzing-output" title="Link to this heading"></a></h2>
+<p><strong>5. Reviewing Energies:</strong>
+- After the calculation, the main result is the <cite>PM7Gibbs_Energies.csv</cite> file, which contains Gibbs free energies for each enumerated structure.</p>
+<p>Example excerpt:</p>
+<div class="highlight-csv notranslate"><div class="highlight"><pre><span></span>13_index,13_energy,29_index,29_energy,...
+THF,0.002637,105.0,0.156997,...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Each pair of columns (<cite>_index</cite>, <cite>_energy</cite>) refers to a particular structure and its calculated energy.</p></li>
+<li><p>Use these energies to identify the most stable species and to compare relative stability of different coordination motifs.</p></li>
+</ul>
+<p><strong>6. Interpreting Results:</strong>
+- Lower energy structures are more likely to dominate in solution.
+- Differences in THF coordination number, TMP aggregation state, or Li–ligand connectivity will be reflected in the list of enumerated species and their energies.</p>
+</section>
+<section id="tips-best-practices">
+<h2>Tips &amp; Best Practices<a class="headerlink" href="#tips-best-practices" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Fragment definition:</strong> The level of detail (e.g., how you split THF or TMP into donors/fragments) affects the range of structures generated.</p></li>
+<li><p><strong>Solvent effects:</strong> THF can be included as an explicit ligand or as part of the environment, depending on your modeling goal.</p></li>
+<li><p><strong>Post-processing:</strong> The energies from PM7 or DFT can be used for further thermodynamic or kinetic modeling (see the <cite>MKM</cite> folder for microkinetic modeling examples, if provided).</p></li>
+</ul>
+</section>
+<section id="references-further-reading">
+<h2>References &amp; Further Reading<a class="headerlink" href="#references-further-reading" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>See [General Input Files](general_input_files.html) and [General Output Files](general_ouput_files.html) for more information about input and output formats.</p></li>
+<li><p>For advanced use, consult the [README](<a class="reference external" href="https://github.com/Manting-Mu/OLIGO">https://github.com/Manting-Mu/OLIGO</a>) and example Jupyter notebooks.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="general_ouput_files.html" class="btn btn-neutral float-left" title="General Output Files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="actinide_complexes.html" class="btn btn-neutral float-right" title="Actinide Complexes: Example Case Study" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
