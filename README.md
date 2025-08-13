@@ -34,6 +34,7 @@ jupyter notebook
 ```
 
 Then open and run the appropriate `.ipynb` file in the `notebooks/` folder, or use the `speci/` scripts directly depending on your workflow.
+See read the doc for examples and detailed steps for how to use the different functions: https://speci.readthedocs.io/en/latest/index.html
 
 ---
 
@@ -75,6 +76,7 @@ This repository supports the methods presented in:
 *Manting Mu et al., 2025 manuscript under preparation*  
 
 If you use this software or any function originated from this software please cite it as below in your work.
+
 Mu, M., Sommer, T., & García-Melchor, M. (2025). SPECI (Version 1.0.0) [Computer software]. https://doi.org/10.5281/zenodo.16823094
 
 ---
